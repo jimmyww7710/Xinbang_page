@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/default.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./js/modules/slick/slick.css">
+    <link rel="stylesheet" href="./js/modules/slick/slick-theme.css">
+    <!-- Magnific Popup core CSS file -->
+    <link rel="stylesheet" href="./js/modules/magnific-popup.css">
+    
+    <!-- jQuery 1.7.2+ or Zepto.js 1.0+ -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <!-- Magnific Popup core JS file -->
+    <script src="./js/modules/jquery.magnific-popup.min.js"></script>
+    <script src="./js/modules/slick/slick.min.js"></script>
+
+    <style>
+        .white-popup-block {
+            background: #FFF;
+            padding: 20px 0px;
+            text-align: left;
+            max-width: 1440px;
+            height: 80vh;
+            margin: 40px auto;
+            position: relative;
+            overflow: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="distance-15 divide-line-color">
+        <div class="flex-setting flex-space-between">
+            <div class="flex-setting" style="padding: 10px 0px;padding-left: 5px;">
+                <img src="./images/logo_single.jpg" alt="" style="vertical-align: middle;">
+                <span><h2 style="color:#585858;">&nbsp;&nbsp;信邦會計師事務所</h2></span>
+            </div>
+            <div>
+                <a class="popup-modal" href="#test-modal" style="display: block;padding:5px;"><i class="fa fa-bars"
+                        style="font-size:24px;color: #1b5f8a"></i></a>
+            </div>
+        </div>
+    </header>
+    <section>
+        <div class="flex-setting flex-space-between">
+
+            <div class="tab-set">
+                <p>公司簡介</p>
+            </div>
+            <div class="tab-set-padding"></div>
+            <div class="tab-set">
+                <p>服務項目</p>
+            </div>
+            <div class="tab-set-padding"></div>
+            <div class="tab-set">
+                <p>會計資訊</p>
+            </div>
+
+        </div>
+
+    </section>
+    <div class="slick">
+        <div>
+            <h3>1</h3>
+        </div>
+        <div>
+            <h3>2</h3>
+        </div>
+        <div>
+            <h3>3</h3>
+        </div>
+        <div>
+            <h3>4</h3>
+        </div>
+        <div>
+            <h3>5</h3>
+        </div>
+        <div>
+            <h3>6</h3>
+        </div>
+    </div>
+
+    <!-- hamburger button -->
+
+    <!-- hamburger button -->
+
+    <!-- content -->
+    <div id="test-modal" class="white-popup-block mfp-hide">
+       <div class="flex-setting" style="align-items: stretch;height:100%;">
+            <div class="flex-setting" style="flex: 0 0 20%;flex-direction: column;">
+                <div><a href="" class="text-href a-button">公司簡介</a></div>
+                <div><a href="" class="text-href a-button">服務項目</a></div>
+                <div><a href="" class="text-href a-button">會計資訊</a></div>
+            </div>
+            <div style="flex: 0 0 80%;border-left: 1px solid rgb(184, 183, 183);"></div>
+       </div>
+    </div>
+    <!-- content -->
+
+    <script>
+        $(function () {
+            $('.popup-modal').magnificPopup({
+                type: 'inline'
+            });
+
+            $('.slick').slick({
+                dots: true,
+                infinite: true,
+                speed: 600,
+                arrows: true,
+                autoplay: true
+            });
+
+        });
+    </script>
+</body>
+
+</html>
