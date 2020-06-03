@@ -37,8 +37,8 @@
     <header class="distance-15 divide-line-color">
         <div class="flex-setting flex-space-between">
             <div class="flex-setting" style="padding: 10px 0px;padding-left: 5px;">
-                <img src="./images/logo_single.jpg" alt="" style="vertical-align: middle;">
-                <span><h2 style="color:#585858;">&nbsp;&nbsp;信邦會計師事務所</h2></span>
+                <img src="./images/logo_single.jpg" alt="" style="vertical-align: middle;width: calc(0.6711409395973155vw + 90.852349px);">
+                <span><h2 class="logo-title">&nbsp;&nbsp;信邦會計師事務所</h2></span>
             </div>
             <div>
                 <a class="popup-modal" href="#test-modal" style="display: block;padding:5px;"><i class="fa fa-bars"
@@ -64,26 +64,20 @@
         </div>
 
     </section>
-    <div class="slick">
-        <div>
-            <h3>1</h3>
+    <div style="width: 100%;overflow: hidden;">
+        <div class="slick-wrapper">
+            <div>
+                <img src="./images/Photopea-to-CTA-1_forpc.jpg" alt="" class="img-response hidden-767">
+                <img src="./images/Photopea-to-CTA-1-mobile.jpg" alt="" class="img-response visible-767">
+            </div>
+            <div>
+                <img src="./images/Photopea-to-CTA-2_forpc.jpg" alt="" class="img-response hidden-767">
+                <img src="./images/Photopea-to-CTA-2-mobile.jpg" alt="" class="img-response visible-767">
+            </div>
         </div>
-        <div>
-            <h3>2</h3>
-        </div>
-        <div>
-            <h3>3</h3>
-        </div>
-        <div>
-            <h3>4</h3>
-        </div>
-        <div>
-            <h3>5</h3>
-        </div>
-        <div>
-            <h3>6</h3>
-        </div>
+
     </div>
+    
 
     <!-- hamburger button -->
 
@@ -91,13 +85,13 @@
 
     <!-- content -->
     <div id="test-modal" class="white-popup-block mfp-hide">
-       <div class="flex-setting" style="align-items: stretch;height:100%;">
-            <div class="flex-setting" style="flex: 0 0 20%;flex-direction: column;">
+       <div class="flex-setting mobile-flex-direction-column" style="align-items: stretch;height:100%;">
+            <div class="flex-setting mobile-flex-direction-row hamburger-tab" style="flex: 0 0 20%;">
                 <div><a href="" class="text-href a-button">公司簡介</a></div>
                 <div><a href="" class="text-href a-button">服務項目</a></div>
                 <div><a href="" class="text-href a-button">會計資訊</a></div>
             </div>
-            <div style="flex: 0 0 80%;border-left: 1px solid rgb(184, 183, 183);"></div>
+            <div class="hamburger-divide" style="flex: 0 0 80%;"></div>
        </div>
     </div>
     <!-- content -->
@@ -108,7 +102,7 @@
                 type: 'inline'
             });
 
-            $('.slick').slick({
+            $('.slick-wrapper').slick({
                 dots: true,
                 infinite: true,
                 speed: 600,
