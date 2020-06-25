@@ -43,14 +43,12 @@ a {
     border-bottom: 0.5px solid rgb(184, 183, 183);
 }
 
-.tab-set:hover,
-.tab-set:active {
+.tab-set:hover{
     border-bottom: 2px solid #1b5f8a;
     background-color: transparent;
 }
 
-.tab-set:hover p,
-.tab-set:active p {
+.tab-set:hover p {
     color: #1b5f8a;
 }
 
@@ -58,7 +56,11 @@ a {
     background-color: #1b5f8a;
     color: #ffffff;
     pointer-events: none;
-  }
+}
+
+.tab-set:target p {
+    color: #ffffff;
+}
 
 .text-href {
     font-weight: 600;
