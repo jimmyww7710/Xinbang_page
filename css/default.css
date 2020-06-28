@@ -37,6 +37,12 @@ a {
     padding: 10px 0px;
     border-bottom: 2px solid rgb(184, 183, 183);
     cursor: pointer;
+    -webkit-touch-callout: none;
+    -moz-user-select: none; /*火狐*/
+    -webkit-user-select: none;  /*webkit浏览器*/
+    -ms-user-select: none;   /*IE10*/
+    -khtml-user-select: none; /*早期浏览器*/
+    user-select: none;
 }
 
 .divide-line-color {
@@ -50,10 +56,6 @@ a {
 
 .tab-set:hover p {
     color: #1b5f8a;
-}
-
-.tab-set:active {
-    border: 0px solid transparent;
 }
 
 .tab-set:target {
