@@ -66,6 +66,10 @@ a {
     color: #ffffff;
     pointer-events: none;
 }
+
+.tab-set.active p {
+    color: #ffffff;
+}
   
 /* .tab-set:target {
     background-color: #1b5f8a;
