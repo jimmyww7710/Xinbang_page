@@ -37,7 +37,7 @@ a {
     flex-grow: 1; 
     text-align: center;
     padding: 10px 0px;
-    border-bottom: 2px solid rgb(184, 183, 183);
+    /* border-bottom: 2px solid rgb(184, 183, 183); */
     cursor: pointer;
     -webkit-touch-callout: none;
     -moz-user-select: none; /*火狐*/
@@ -52,7 +52,7 @@ a {
 }
 
 .tab-set:hover{
-    border-bottom: 2px solid #1b5f8a;
+    /* border-bottom: 2px solid #1b5f8a; */
     background-color: #ddd;
 }
 
@@ -137,6 +137,48 @@ a {
     max-width: 100%;
     height: auto;
     margin: 0 auto;
+}
+
+.row-1440 {
+    max-width: 1440px;
+    margin: 0 12.1%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.padding-door {
+ padding: 0 15px;
+}
+
+.position-fix {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: auto;
+    background-color:#ffffff;
+    z-index: 99;
+}
+.tabcontent {
+    display: none;
+}
+.tabcontent:nth-child(1) {
+    display: block;
+}
+
+@media screen and (max-width: 1440px) {
+    .row-1440 {
+        margin: 0 4.17%;
+    }
+ 
+}
+
+@media screen and (max-width: 991px) {
+    .row-1440 {
+        padding-right: 15px !important;
+        padding-left: 15px !important;
+        margin: 0 auto;
+    }
 }
 
 @media screen and (max-width: 767px) {

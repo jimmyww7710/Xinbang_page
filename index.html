@@ -19,6 +19,7 @@
     <script src="./js/modules/jquery.magnific-popup.min.js"></script>
     <script src="./js/modules/slick/slick.min.js"></script>
     <script src="./js/modules/tab.js"></script>
+    <script src="./js/modules/pageUI.js"></script>
 
     <style>
         .white-popup-block {
@@ -31,67 +32,80 @@
             position: relative;
             overflow: auto;
         }
+
+        .slick-wrapper {
+            width: 100%;
+            overflow: hidden;
+        }
     </style>
 </head>
 
 <body>
-    <header class="distance-15 divide-line-color">
-        <div class="flex-setting flex-space-between">
-            <div class="flex-setting" style="padding: 10px 0px;padding-left: 5px;">
-                <img src="./images/logo_single.jpg" alt=""
-                    style="vertical-align: middle;width: calc(0.6711409395973155vw + 90.852349px);">
-                <span>
-                    <h2 class="logo-title">&nbsp;&nbsp;信邦會計師事務所</h2>
-                </span>
-            </div>
-            <div>
-                <a class="popup-modal" href="#test-modal" style="display: block;padding:5px;"><i class="fa fa-bars"
-                        style="font-size:28px;color: #1b5f8a;height: 30px; line-height: 30px;"></i></a>
-            </div>
-        </div>
-    </header>
-    <section>
-        <div class="flex-setting flex-center">
+    <section id="nav">
+        <header class="distance-15 divide-line-color">
+            <section class="row-1440">
+                <div class="flex-setting flex-space-between">
+                    <div class="flex-setting" style="padding: 10px 0px;padding-left: 5px;cursor: pointer;" onclick="setScrollTo(0)">
+                        <img src="./images/logo_single.jpg" alt=""
+                            style="vertical-align: middle;width: calc(0.6711409395973155vw + 90.852349px);">
+                        <span>
+                            <h2 class="logo-title">&nbsp;&nbsp;信邦會計師事務所</h2>
+                        </span>
+                    </div>
+                    <div>
+                        <a class="popup-modal" href="#test-modal" style="display: block;padding:5px;"><i
+                                class="fa fa-bars"
+                                style="font-size:28px;color: #1b5f8a;height: 30px; line-height: 30px;"></i></a>
+                    </div>
+                </div>
+            </section>
+        </header>
+        <section>
+            <section class="row-1440">
+                <div class="flex-setting flex-center">
+                    <a class="tab-set active" onclick="openCity(event, 'company');setScrollTo($('#company').offset().top)">
+                        <p>公司簡介</p>
+                    </a>
+                    <a class="tab-set" onclick="openCity(event, 'service');setScrollTo($('#service').offset().top)">
+                        <p>服務項目</p>
+                    </a>
+                    <a class="tab-set" onclick="openCity(event, 'account-info');setScrollTo($('#account-info').offset().top)">
+                        <p>會計資訊</p>
+                    </a>
+                </div>
+            </section>
 
-            <a class="tab-set" onclick="openCity(event, 'company')">
-                <p>公司簡介</p>
-            </a>
-            <a class="tab-set" onclick="openCity(event, 'service')">
-                <p>服務項目</p>
-            </a>
-            <a class="tab-set" onclick="openCity(event, 'account-info')">
-                <p>會計資訊</p>
-            </a>
-        </div>
-
+        </section>
     </section>
-    <div style="width: 100%;overflow: hidden;">
-        <div class="slick-wrapper">
-            <div>
-                <img src="./images/DSC05035.jpg" alt="" class="img-response hidden-767">
-                <img src="./images/DSC05035.jpg" alt="" class="img-response visible-767">
+    <section id="main-content">
+        <div>
+            <div class="slick-wrapper">
+                <div>
+                    <img src="./images/DSC05035.jpg" alt="" class="img-response hidden-767">
+                    <img src="./images/DSC05035.jpg" alt="" class="img-response visible-767">
+                </div>
+                <div>
+                    <img src="./images/DSC04964.jpg" alt="" class="img-response hidden-767">
+                    <img src="./images/DSC04964.jpg" alt="" class="img-response visible-767">
+                </div>
             </div>
-            <div>
-                <img src="./images/DSC04964.jpg" alt="" class="img-response hidden-767">
-                <img src="./images/DSC04964.jpg" alt="" class="img-response visible-767">
-            </div>
+
+        </div>
+        <div id="company" class="tabcontent padding-door">
+            <h3>公司簡介</h3>
+            <p>London is the capital city of England.</p>
         </div>
 
-    </div>
-    <div id="company" class="tabcontent">
-        <h3>London</h3>
-        <p>London is the capital city of England.</p>
-      </div>
-      
-      <div id="service" class="tabcontent">
-        <h3>Paris</h3>
-        <p>Paris is the capital of France.</p> 
-      </div>
-      
-      <div id="account-info" class="tabcontent">
-        <h3>Tokyo</h3>
-        <p>Tokyo is the capital of Japan.</p>
-      </div>
+        <div id="service" class="tabcontent padding-door">
+            <h3>服務項目</h3>
+            <p>Paris is the capital of France.</p>
+        </div>
+
+        <div id="account-info" class="tabcontent padding-door">
+            <h3>會計資訊</h3>
+            <p>Tokyo is the capital of Japan.</p>
+        </div>
+    </section>
 
     <!-- hamburger button -->
 
@@ -114,7 +128,7 @@
                 <div><a href="" class="text-href a-button">會計資訊</a></div>
             </div>
             <div style="flex-grow: 4;">
-              
+
             </div>
         </div>
 
@@ -135,6 +149,8 @@
                 autoplay: true
             });
 
+            scrollSetPositionFixed();
+            document.getElementById("company").style.display = "block";
         });
     </script>
 </body>
