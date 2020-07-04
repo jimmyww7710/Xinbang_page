@@ -32,6 +32,8 @@ a {
  }
 
 .tab-set {
+    background-color:transparent;
+    color:black;
     flex-grow: 1; 
     text-align: center;
     padding: 10px 0px;
@@ -51,14 +53,21 @@ a {
 
 .tab-set:hover{
     border-bottom: 2px solid #1b5f8a;
-    background-color: transparent;
+    background-color: #ddd;
 }
 
 .tab-set:hover p {
     color: #1b5f8a;
 }
 
-.tab-set:target {
+/* Create an active/current tablink class */
+.tab-set.active {
+    background-color: #1b5f8a;
+    color: #ffffff;
+    pointer-events: none;
+}
+  
+/* .tab-set:target {
     background-color: #1b5f8a;
     color: #ffffff;
     pointer-events: none;
@@ -66,7 +75,7 @@ a {
 
 .tab-set:target p {
     color: #ffffff;
-}
+} */
 
 .text-href {
     font-weight: 600;
