@@ -63,13 +63,13 @@
         <section>
             <section class="row-1440">
                 <div class="flex-setting flex-center">
-                    <a class="tab-set active" onclick="openCity(event, 'company');setScrollTo($('#company').offset().top)">
+                    <a class="tab-set active" onclick="openCity(event, 'company');setScrollTo($('#company').offset().top - $('#nav').height())">
                         <p>公司簡介</p>
                     </a>
-                    <a class="tab-set" onclick="openCity(event, 'service');setScrollTo($('#service').offset().top)">
+                    <a class="tab-set" onclick="openCity(event, 'service');setScrollTo($('#service').offset().top - $('#nav').height())">
                         <p>服務項目</p>
                     </a>
-                    <a class="tab-set" onclick="openCity(event, 'account-info');setScrollTo($('#account-info').offset().top)">
+                    <a class="tab-set" onclick="openCity(event, 'account-info');setScrollTo($('#account-info').offset().top - $('#nav').height())">
                         <p>會計資訊</p>
                     </a>
                 </div>
@@ -89,21 +89,23 @@
                     <img src="./images/DSC04964.jpg" alt="" class="img-response visible-767">
                 </div>
             </div>
-
         </div>
         <div id="company" class="tabcontent padding-door">
             <h3>公司簡介</h3>
             <p>London is the capital city of England.</p>
+            <div style="height:1000px;"></div>
         </div>
 
         <div id="service" class="tabcontent padding-door">
             <h3>服務項目</h3>
             <p>Paris is the capital of France.</p>
+            <div style="height:1000px;"></div>
         </div>
 
         <div id="account-info" class="tabcontent padding-door">
             <h3>會計資訊</h3>
             <p>Tokyo is the capital of Japan.</p>
+            <div style="height:1000px;"></div>
         </div>
     </section>
 
